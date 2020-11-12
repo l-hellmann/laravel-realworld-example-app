@@ -1,0 +1,10 @@
+# select what technology your build uses
+use: [ php@7.4 ]
+# which commands to run to build
+run:
+  - composer update
+  - composer install
+  - php artisan migrate
+  - rm -rf bootsrap
+# which files / folders to deploy after build
+deploy: [ "." ]
